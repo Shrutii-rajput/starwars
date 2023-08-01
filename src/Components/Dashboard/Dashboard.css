@@ -1,0 +1,48 @@
+
+.centered {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 90vh; 
+    width: 80vw;
+    background-color: #03123D;
+  }
+  
+  .polaroid {
+    border-radius: 12px;
+    background-color: #E0E6ED;
+    padding: 1rem;
+    max-width: 50vw; 
+    text-align: center; 
+    box-shadow: 0 7px 34px rgba(23, 23, 37, 0.25);
+    transition: all 300ms ease-in;
+  }
+  .polaroid:hover{
+    transform: scale(1.02);
+  }
+  .image {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 1rem; 
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    transition: all 300ms ease-in;
+  }
+  .image:hover {
+    transform: scale(1.01); /* Increase the image size by 20% on hover */
+  }
+  .container{
+    background-color: #E0E6ED;
+  }
+  h2{
+    color: #3B3F5C;
+    font-family: var(--font2);
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  p{
+    color: #3B3F5C;
+    font-weight: 400;
+    text-align: justify;
+  }
