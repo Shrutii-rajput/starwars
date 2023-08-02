@@ -10,11 +10,13 @@ import axios from 'axios';
 const Films = () => {
   const [films, setFilms] = useState([]);
   const [isGridView, setIsGridView] = useState(true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios.get('https://swapi.dev/api/films/')
       .then(response => {
         console.log(response);
         setFilms(response.data.results);
+        setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -23,36 +25,63 @@ const Films = () => {
 
 
 
-
   return (
     <div>
       <nav className='head'>
         <h3>Films</h3>
-      <div className='toggle'>
-        <button className={`grid ${isGridView ? 'active' : ''}`} onClick={() => setIsGridView(true)}>
-          {isGridView ? <ViewModuleIcon />: <ViewModuleIcon />}
-          {isGridView ? 'Grid': ''}
-        </button>
-        <button className={`list ${!isGridView ? 'active' : ''}`}  onClick={() => setIsGridView(false)}>
-          {!isGridView ? <ReorderIcon />: <ReorderIcon />}
-          {!isGridView ? 'List': ''}
-        </button>
-      </div>
+        <div className='toggle'>
+          <button className={`grid ${isGridView ? 'active' : ''}`} onClick={() => setIsGridView(true)}>
+            {isGridView ? <ViewModuleIcon /> : <ViewModuleIcon />}
+            {isGridView ? 'Grid' : ''}
+          </button>
+          <button className={`list ${!isGridView ? 'active' : ''}`} onClick={() => setIsGridView(false)}>
+            {!isGridView ? <ReorderIcon /> : <ReorderIcon />}
+            {!isGridView ? 'List' : ''}
+          </button>
+        </div>
       </nav>
-      <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
-        {films.map((film, episode_id) => (
-         <div className="film-item" key={episode_id}>
-            <img src='https://picsum.photos/' alt={film.title} />
-            <h2>{film.title}</h2>
-            <p>{film.release_date}</p>
-            {/* <select>
-              <option value=""><ListIcon /></option>
-              <option value="action1">Action 1</option>
-              <option value="action2">Action 2</option>
-            </select> */}
+      <div>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
+            {films.map((film, episode_id) => (
+              <div className="film-item" key={episode_id}>
+                <img className='img' src={`https://picsum.photos/id/${episode_id + 20}/300/200`} alt={film.title} />
+                <div className='film-inf'>
+                  <div className='film-left'>
+                    <img src=".\FilmReel.png" alt="" />
+                    <div className='ftr'>
+                      <h4>{film.title}</h4>
+                      <h6>{film.release_date}</h6>
+                    </div>
+                  </div>
+                  <button className='film-right'><ListIcon /></button>
+                </div>
+              </div>
+            ))}
+            <div className='table-container'>
+            <table>
+              <tr>
+                <th className='name'>Name</th>
+                <th className='director'>Director</th>
+                <th className='date'>Release Date</th>
+                <th className='icon'></th>
+              </tr>
+              {films.map((film, episode_id) => (
+                <div className="film-table" key={episode_id}>
+                  <tr>
+                    <td className='name'><img src=".\FilmReel.png" alt="" />{film.title}</td>
+                    <td className='director'>{film.director}</td>
+                    <td className='date'>{film.release_date}</td>
+                    <td className='icon'><ListIcon /></td>
+                  </tr>
+                </ div>
+              ))}
+            </table>
+              </div>
           </div>
-        ))}
-      </div>
+        )} </div>
     </div>
   )
 }

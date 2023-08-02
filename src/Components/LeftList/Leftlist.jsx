@@ -8,6 +8,12 @@ const Leftlist = () => {
     <div>
       <nav className='list-left'>
         <ul>
+        <li>
+          <Link to="/" className='linksty'><button className='hello'><div className='content'>
+            <FolderIcon className='folder' />
+            <span>Home</span>
+          </div><div className='arrow'>&gt;</div></button></Link>
+          </li>
           <li>
           <Link to="/films" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
