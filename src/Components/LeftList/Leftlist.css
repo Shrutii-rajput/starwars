@@ -54,12 +54,16 @@ ul {
 }
 
 li {
-    margin: 2rem 0;
+    margin: 2vh 0;
+}
+.linksty:hover{
+  transform: scale(1.02);
 }
 .linksty {
     text-decoration: none;
     display: flex;
     overflow: hidden;
+    transition: all 300ms ease-in;
   }
   
   .hello {
@@ -67,6 +71,7 @@ li {
     border: 1px solid #ccc;
     color: white;
     font-weight: 500;
+    font-size: 2.5vh;
     font-family: var(--font1);
     display: flex;
     align-items: center;

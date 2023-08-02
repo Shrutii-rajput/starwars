@@ -14,7 +14,6 @@ const Films = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/films/')
       .then(response => {
-        console.log(response);
         setFilms(response.data.results);
         setLoading(false);
       })
@@ -62,21 +61,24 @@ const Films = () => {
             ))}
             <div className='table-container'>
             <table>
-              <tr>
+              <tr className='table-head'>
                 <th className='name'>Name</th>
                 <th className='director'>Director</th>
                 <th className='date'>Release Date</th>
                 <th className='icon'></th>
               </tr>
               {films.map((film, episode_id) => (
-                <div className="film-table" key={episode_id}>
-                  <tr>
-                    <td className='name'><img src=".\FilmReel.png" alt="" />{film.title}</td>
-                    <td className='director'>{film.director}</td>
-                    <td className='date'>{film.release_date}</td>
-                    <td className='icon'><ListIcon /></td>
-                  </tr>
-                </ div>
+                <tr key={episode_id}>
+                <td className='name'>
+                  <div className='title-con'>
+                  <img src=".\FilmReel.png" alt="" /><span className='title'>
+                  {film.title}</span>
+                  </ div>
+                </td>
+                <td className='director'>{film.director}</td>
+                <td className='date'>{film.release_date}</td>
+                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+              </tr>
               ))}
             </table>
               </div>
