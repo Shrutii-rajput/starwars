@@ -3,6 +3,21 @@
     grid-template-columns: auto auto auto;
     gap: 0;
 }
+.films-contain {
+  transition: all 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Additional styles for when the sidebar is open */
+.films-contain.sidebar-open {
+  margin-right: 300px; /* Increase right margin to make space for the sidebar */
+}
+
+/* Reduce the number of columns in the grid to 2 when the sidebar is open */
+.films-contain.sidebar-open .film-container.grid-view {
+  display: grid;
+    grid-template-columns: auto auto;
+    gap: 0;
+}
 
 .film-container.grid-view table{
     display: none;

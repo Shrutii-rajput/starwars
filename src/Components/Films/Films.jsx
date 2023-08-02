@@ -1,6 +1,7 @@
 import React from 'react';
 import './Films.css';
 import '../../index.css';
+import Sidebar from '../Sidebar/Sidebar';
 import { useState, useEffect } from 'react';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ReorderIcon from '@mui/icons-material/Reorder';
@@ -11,6 +12,9 @@ const Films = () => {
   const [films, setFilms] = useState([]);
   const [isGridView, setIsGridView] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [selectedFilm, setSelectedFilm] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   useEffect(() => {
     axios.get('https://swapi.dev/api/films/')
       .then(response => {
@@ -22,10 +26,18 @@ const Films = () => {
       });
   }, []);
 
+  const handleFilmClick = (film) => {
+    setSelectedFilm(film);
+    setSidebarOpen(true);
+  };
 
+  const handleCloseSidebar = () => {
+    setSelectedFilm(null);
+    setSidebarOpen(false);
+  };
 
   return (
-    <div>
+    <div className={`films-contain ${sidebarOpen ? 'sidebar-open' : '.sidebar-close'}`}>
       <nav className='head'>
         <h3>Films</h3>
         <div className='toggle'>
@@ -45,8 +57,8 @@ const Films = () => {
         ) : (
           <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
             {films.map((film, episode_id) => (
-              <div className="film-item" key={episode_id}>
-                <img className='img' src={`${episode_id+1}.jpg`} alt={film.title} />
+              <div className="film-item" key={episode_id} onClick={() => handleFilmClick(film)}>
+                <img className='img' src={`${film.episode_id}.jpg`} alt={film.title} />
                 <div className='film-inf'>
                   <div className='film-left'>
                     <img src=".\FilmReel.png" alt="" />
@@ -68,7 +80,7 @@ const Films = () => {
                 <th className='icon'></th>
               </tr>
               {films.map((film, episode_id) => (
-                <tr key={episode_id}>
+                <tr key={episode_id} onClick={() => handleFilmClick(film)}>
                 <td className='name'>
                   <div className='title-con'>
                   <img src=".\FilmReel.png" alt="" /><span className='title'>
@@ -83,7 +95,9 @@ const Films = () => {
             </table>
               </div>
           </div>
-        )} </div>
+        )} 
+        <Sidebar film={selectedFilm} onClose={handleCloseSidebar} />
+        </div>
     </div>
   )
 }
