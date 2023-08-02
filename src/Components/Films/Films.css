@@ -21,6 +21,7 @@
     width: 100%;
     height: 30vh;
     border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
 }
 .film-container.grid-view .film-item .film-inf{
     background-color: #d0d5e433;

@@ -46,7 +46,7 @@ const Films = () => {
           <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
             {films.map((film, episode_id) => (
               <div className="film-item" key={episode_id}>
-                <img className='img' src={`https://picsum.photos/id/${episode_id + 20}/300/200`} alt={film.title} />
+                <img className='img' src={`${episode_id+1}.jpg`} alt={film.title} />
                 <div className='film-inf'>
                   <div className='film-left'>
                     <img src=".\FilmReel.png" alt="" />
