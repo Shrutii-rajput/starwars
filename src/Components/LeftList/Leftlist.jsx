@@ -21,31 +21,31 @@ const Leftlist = () => {
           </div><div className='arrow'>&gt;</div></button></Link>
           </li>
           <li>
-          <Link to="/films" className='linksty'><button className='hello'><div className='content'>
+          <Link to="/people" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
             <span>People</span>
           </div><div className='arrow'>&gt;</div></button></Link>
           </li>
           <li>
-          <Link to="/films" className='linksty'><button className='hello'><div className='content'>
+          <Link to="/planets" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
             <span>Planets</span>
           </div><div className='arrow'>&gt;</div></button></Link>
           </li>
           <li>
-          <Link to="/films" className='linksty'><button className='hello'><div className='content'>
+          <Link to="/species" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
             <span>Species</span>
           </div><div className='arrow'>&gt;</div></button></Link>
           </li>
           <li>
-          <Link to="/films" className='linksty'><button className='hello'><div className='content'>
+          <Link to="/starships" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
             <span>Starships</span>
           </div><div className='arrow'>&gt;</div></button></Link>
           </li>
           <li>
-          <Link to="/films" className='linksty'><button className='hello'><div className='content'>
+          <Link to="/vehicles" className='linksty'><button className='hello'><div className='content'>
             <FolderIcon className='folder' />
             <span>Vehicles</span>
           </div><div className='arrow'>&gt;</div></button></Link>
