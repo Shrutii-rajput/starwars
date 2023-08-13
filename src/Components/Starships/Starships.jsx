@@ -1,5 +1,4 @@
 import React from 'react';
-import './Starships.css';
 
 const Starships = () => {
   return (

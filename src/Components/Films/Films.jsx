@@ -1,7 +1,6 @@
 import React from 'react';
-import './Films.css';
 import '../../index.css';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from './Sidebar_film';
 import { useState, useEffect } from 'react';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ReorderIcon from '@mui/icons-material/Reorder';
@@ -58,7 +57,7 @@ const Films = () => {
           <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
             {films.map((film, episode_id) => (
               <div className="film-item" key={episode_id} onClick={() => handleFilmClick(film)}>
-                <img className='img' src={`${film.episode_id}.jpg`} alt={film.title} />
+                <img className='img' src={`Films_${film.episode_id}.jpg`} alt={film.title} />
                 <div className='film-inf'>
                   <div className='film-left'>
                     <img src=".\FilmReel.png" alt="" />

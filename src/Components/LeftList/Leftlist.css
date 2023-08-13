@@ -109,4 +109,6 @@ li {
   .hello:hover span{
     background-color: #CB1A80;
   }
-  
+  .linksty.selected .hello {
+    background-color: #CB1A80;
+  }
