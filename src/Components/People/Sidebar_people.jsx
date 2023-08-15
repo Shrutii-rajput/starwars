@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Sidebar.css';
 
-const Sidebar_people = ({ peop, onClose }) => {
+const Sidebar_people = ({ peop, onClose, link}) => {
   return (
     <div className={`sidebar ${peop ? '' : 'hidden'}`}>
       <div className='side-head'><h3 className='heading'>Character details</h3>
@@ -11,7 +11,7 @@ const Sidebar_people = ({ peop, onClose }) => {
       {peop ? (
         <div className='side-body'>
           <p>Image</p>
-          <img className="film-image" src={`peop_${peop.name}.jpg`} alt={peop.name} />
+          <img className="film-image" src={link} alt={peop.name} />
           <p>Name</p>
           <div className='side-box'>{peop.name}</div>
           <p>Height</p>

@@ -241,4 +241,24 @@
   tr.table-head:hover{
     background-color: rgba(77, 88, 117, 1);
   }
-  
+  .pagination{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    justify-content: center;
+  }
+  .page-but{
+    margin: 0 1rem;
+    padding: 0.5rem;
+    background-color: #CB1A80;
+    color: white;
+    font-family: var(--font2);
+    font-size: medium;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .page-no{
+    color: white;
+    font-size: small;
+    font-family: var(--font1);
+  }
