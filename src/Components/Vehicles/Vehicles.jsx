@@ -110,7 +110,7 @@ const Vehicles = () => {
                       <h4>{vehicle.name}</h4>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ const Vehicles = () => {
                 <th className='name'>Name</th>
                 <th className='director'>Model</th>
                 <th className='date'>Manufacturer</th>
-                <th className='icon'></th>
+                {/* <th className='icon'></th> */}
               </tr>
               {vehicles.map((vehicle,k) => (
                 <tr key={k} onClick={() => handleFilmClick(vehicle, `https://picsum.photos/id/${(k+50)*currentPage}/300/200`)}>
@@ -132,7 +132,7 @@ const Vehicles = () => {
                 </td>
                 <td className='director'>{vehicle.model}</td>
                 <td className='date'>{vehicle.manufacturer}</td>
-                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
               </tr>
               ))}
             </table>

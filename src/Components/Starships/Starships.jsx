@@ -110,7 +110,7 @@ const Starships = () => {
                       <h4>{starship.name}</h4>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ const Starships = () => {
                 <th className='name'>Name</th>
                 <th className='director'>Model</th>
                 <th className='date'>Manufacturer</th>
-                <th className='icon'></th>
+                {/* <th className='icon'></th> */}
               </tr>
               {starships.map((starship,k) => (
                 <tr key={k} onClick={() => handleFilmClick(starship, `https://picsum.photos/id/${(k+40)*currentPage}/300/200`)}>
@@ -132,7 +132,7 @@ const Starships = () => {
                 </td>
                 <td className='director'>{starship.model}</td>
                 <td className='date'>{starship.manufacturer}</td>
-                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
               </tr>
               ))}
             </table>

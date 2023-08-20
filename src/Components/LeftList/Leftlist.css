@@ -1,20 +1,11 @@
 .left {
-    height: 90vh;
+    height: 100%;
     background-color: #03123D;
     position: fixed;
 
 }
-
-.nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
-    height: 10vh;
-    background-color: #03123D;
-    box-sizing: border-box;
-    position: fixed;
+.starwars{
+  margin: 1rem;
 }
 
 .search {
@@ -75,7 +66,7 @@ li {
     font-family: var(--font1);
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5vh 1vw;
     cursor: pointer;
     width: 15vw; /* Set the button width to 100% of the parent container (li) */
   box-sizing: border-box;
@@ -112,3 +103,10 @@ li {
   .linksty.selected .hello {
     background-color: #CB1A80;
   }
+
+
+@media (max-width:800px){
+  .arrow{
+      left: 100px;
+  }
+}

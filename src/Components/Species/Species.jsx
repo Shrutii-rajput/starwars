@@ -110,7 +110,7 @@ const Species = () => {
                       <h4>{specie.name}</h4>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ const Species = () => {
                 <th className='name'>Name</th>
                 <th className='director'>Classification</th>
                 <th className='date'>Average Lifespan</th>
-                <th className='icon'></th>
+                {/* <th className='icon'></th> */}
               </tr>
               {species.map((specie,k) => (
                 <tr key={k} onClick={() => handleFilmClick(specie, `https://picsum.photos/id/${(k+30)*currentPage}/300/200`)}>
@@ -132,7 +132,7 @@ const Species = () => {
                 </td>
                 <td className='director'>{specie.classification}</td>
                 <td className='date'>{specie.average_lifespan}</td>
-                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
               </tr>
               ))}
             </table>

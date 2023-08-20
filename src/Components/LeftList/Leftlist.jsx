@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import FolderIcon from '@mui/icons-material/Folder';
+import './Leftlist.css';
 
 const Leftlist = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const Leftlist = () => {
   }, [location.pathname]);
   return (
     <div>
+      <img className='starwars' src="./image6.png" alt="" />
       <nav className='list-left'>
         <ul>
           <li>

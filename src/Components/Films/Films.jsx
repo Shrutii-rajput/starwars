@@ -56,7 +56,7 @@ const Films = () => {
         ) : (
           <div className={`film-container ${isGridView ? 'grid-view' : 'list-view'}`}>
             {films.map((film, episode_id) => (
-              <div className="film-item" key={episode_id} onClick={() => handleFilmClick(film)}>
+              <div className="film-item hide" key={episode_id} onClick={() => handleFilmClick(film)}>
                 <img className='img' src={`Films_${film.episode_id}.jpg`} alt={film.title} />
                 <div className='film-inf'>
                   <div className='film-left'>
@@ -66,7 +66,7 @@ const Films = () => {
                       <h6>{film.release_date}</h6>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -76,10 +76,10 @@ const Films = () => {
                 <th className='name'>Name</th>
                 <th className='director'>Director</th>
                 <th className='date'>Release Date</th>
-                <th className='icon'></th>
+                {/* <th className='icon'></th> */}
               </tr>
               {films.map((film, episode_id) => (
-                <tr key={episode_id} onClick={() => handleFilmClick(film)}>
+                <tr className='hide' key={episode_id} onClick={() => handleFilmClick(film)}>
                 <td className='name'>
                   <div className='title-con'>
                   <img src=".\FilmReel.png" alt="" /><span className='title'>
@@ -88,7 +88,7 @@ const Films = () => {
                 </td>
                 <td className='director'>{film.director}</td>
                 <td className='date'>{film.release_date}</td>
-                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
               </tr>
               ))}
             </table>

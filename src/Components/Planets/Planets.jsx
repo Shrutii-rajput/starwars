@@ -110,7 +110,7 @@ const Planets = () => {
                       <h4>{planet.name}</h4>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ const Planets = () => {
                 <th className='name'>Name</th>
                 <th className='director'>Climate</th>
                 <th className='date'>Gravity</th>
-                <th className='icon'></th>
+                {/* <th className='icon'></th> */}
               </tr>
               {planets.map((planet,k) => (
                 <tr key={k} onClick={() => handleFilmClick(planet, `https://picsum.photos/id/${(k+20)*currentPage}/300/200`)}>
@@ -132,7 +132,7 @@ const Planets = () => {
                 </td>
                 <td className='director'>{planet.climate}</td>
                 <td className='date'>{planet.gravity}</td>
-                <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
               </tr>
               ))}
             </table>

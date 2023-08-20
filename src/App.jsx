@@ -7,12 +7,10 @@ import Species from './Components/Species/Species';
 import Starships from './Components/Starships/Starships';
 import Vehicles from './Components/Vehicles/Vehicles';
 import Leftlist from './Components/LeftList/Leftlist';
-import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <>
-    <Navbar />
     <div className="parent">
       <div className="left">
       <Leftlist />

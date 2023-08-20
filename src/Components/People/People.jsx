@@ -121,7 +121,7 @@ const People = () => {
                       <h4>{peop.name}</h4>
                     </div>
                   </div>
-                  <button className='film-right'><ListIcon /></button>
+                  {/* <button className='film-right'><ListIcon /></button> */}
                 </div>
               </div>
             ))}
@@ -131,7 +131,7 @@ const People = () => {
                   <th className='name'>Name</th>
                   <th className='director'>Birth Year</th>
                   <th className='date'>Height</th>
-                  <th className='icon'></th>
+                  {/* <th className='icon'></th> */}
                 </tr>
                 {people.map((peop, k) => (
                   <tr key={k} onClick={() => handleFilmClick(peop, `https://picsum.photos/id/${(k+10)*currentPage}/300/200`)}>
@@ -143,7 +143,7 @@ const People = () => {
                     </td>
                     <td className='director'>{peop.birth_year}</td>
                     <td className='date'>{peop.height}</td>
-                    <td className='icon'><button className='film-right'><ListIcon /></button></td>
+                    {/* <td className='icon'><button className='film-right'><ListIcon /></button></td> */}
                   </tr>
                 ))}
               </table>

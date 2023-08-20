@@ -2,7 +2,7 @@
     background-color: #03123d;
     padding: 1rem;
     border-left: 1px solid #03123d;
-    width: 300px;
+    width: 24vw;
     position: fixed;
     top: 0;
     right: 0;
@@ -35,6 +35,7 @@
   }
   .heading{
     color: white;
+    font-size: 3vh;
   }
   .close-btn {
     position: absolute;
@@ -45,7 +46,7 @@
     border: none;
     cursor: pointer;
     padding: 5px;
-    font-size: 16px;
+    font-size: 2vh;
   }
   
   .close-btn:hover {
@@ -57,11 +58,11 @@
     font-family: var(--font1);
     color: white;
     margin: 0.5rem 0;
-    font-size: small;
+    font-size: 2vh;
   }
   .side-box{
     font-family: var(--font2);
-    font-size: small;
+    font-size: 2vh;
     background-color: #FAFAFB;
     border: 1px solid #F1F1F5;
     color: #252C32;
@@ -78,7 +79,7 @@
   border-radius: 8px;
   color: white;
   font-family: var(--font1);
-  font-size: medium;
+  font-size: 3vh;
   transition: all 300ms ease-in;
  } 
  .close-btn-end:hover{
